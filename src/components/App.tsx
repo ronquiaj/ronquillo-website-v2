@@ -1,10 +1,13 @@
+import SmallScreenProvider from "contexts/SmallScreenContext";
 import React, { FC } from "react";
 import Landing from "../sections/Landing/Landing";
 
 const App: FC = () => {
   return (
     <>
-      <Landing />
+      <SmallScreenProvider>
+        <Landing />
+      </SmallScreenProvider>
     </>
   );
 };
