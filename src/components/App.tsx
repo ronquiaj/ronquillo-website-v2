@@ -1,11 +1,12 @@
+import React, { FC } from "react";
 import Landing from "../sections/Landing/Landing";
 
-function App() {
+const App: FC = () => {
   return (
     <>
       <Landing />
     </>
   );
-}
+};
 
 export default App;
