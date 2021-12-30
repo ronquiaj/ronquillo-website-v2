@@ -11,7 +11,7 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
-      "3xl": "2000px",
+      "3xl": "1900px",
     },
     fontFamily: {
       merriweather: ["Merriweather Sans", "sans-serif"],

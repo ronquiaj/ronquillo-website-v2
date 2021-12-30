@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import "./styles.css";
 
 type Props = {
   path: string;
@@ -11,7 +10,11 @@ type Props = {
 const IconLink: FC<Props> = ({ path, alt, url, classes }: Props) => {
   return (
     <a href={url}>
-      <img className={`icon ${classes}`} src={path} alt={alt} />
+      <img
+        className={`icon cursor-pointer 3xl:w-20 xs:w-12 ${classes}`}
+        src={path}
+        alt={alt}
+      />
     </a>
   );
 };
