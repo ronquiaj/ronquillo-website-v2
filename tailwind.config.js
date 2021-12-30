@@ -1,6 +1,18 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    debugScreens: {
+      position: ["top", "left"],
+    },
+    screens: {
+      xs: "0px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "2000px",
+    },
     fontFamily: {
       merriweather: ["Merriweather Sans", "sans-serif"],
     },
@@ -12,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-debug-screens")],
 };

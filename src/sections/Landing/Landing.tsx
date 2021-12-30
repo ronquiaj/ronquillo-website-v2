@@ -1,14 +1,23 @@
+import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import React, { FC } from "react";
+import IconFooter from "./IconFooter/IconFooter";
 import "./styles.css";
 
 const Landing: FC = () => {
   return (
-    <section className="flex flex-col justify-center w-full items-center bg-background h-full">
-      <h1 className="text-center text-primary -mt-20">adrian ronquillo</h1>
-      <img className="profile " src="profilePicture.png" alt="profile" />
-      <h3 className="text-primary text-center font-normal">
+    <section className="flex flex-col items-center w-full h-full m-0 bg-background">
+      <h1 className="mt-12 tracking-widest text-center text-primary debug-screens">
+        adrian ronquillo
+      </h1>
+      <ProfilePicture
+        className="object-cover mb-20"
+        alt="adrian"
+        path="profilePictureShaded.png"
+      />
+      <h2 className="text-center sm:tracking-widest text-primary xs:text-md sm:text-3xl">
         ketchikan, alaska . 22 years old . full-stack engineer . filipino
-      </h3>
+      </h2>
+      <IconFooter className="absolute bottom-7" />
     </section>
   );
 };
