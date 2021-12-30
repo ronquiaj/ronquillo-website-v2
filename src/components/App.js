@@ -1,4 +1,4 @@
-import Landing from "./Landing/Landing";
+import Landing from "../sections/Landing/Landing";
 
 function App() {
   return (
