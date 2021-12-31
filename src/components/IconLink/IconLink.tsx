@@ -4,14 +4,14 @@ type Props = {
   path: string;
   alt: string;
   url: string;
-  classes?: string;
+  className?: string;
 };
 
-const IconLink: FC<Props> = ({ path, alt, url, classes }: Props) => {
+const IconLink: FC<Props> = ({ path, alt, url, className }: Props) => {
   return (
     <a href={url}>
       <img
-        className={`icon cursor-pointer 3xl:w-20 xs:w-12 ${classes}`}
+        className={`icon cursor-pointer 3xl:w-16 xs:w-12  ${className}`}
         src={path}
         alt={alt}
       />

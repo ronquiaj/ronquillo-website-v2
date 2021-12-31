@@ -6,7 +6,7 @@ type Props = { className?: string };
 const IconFooter: FC<Props> = ({ className }: Props) => {
   return (
     <div
-      className={`flex flex-row xs:w-full sm:w-1/2 iconfooter justify-evenly ${className}`}
+      className={`flex flex-row xs:w-full sm:w-1/2 lg:w-1/4 iconfooter justify-evenly ${className}`}
     >
       <IconLink
         path="github.png"

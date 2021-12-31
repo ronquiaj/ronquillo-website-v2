@@ -7,7 +7,7 @@ import React, {
   ReactNode,
 } from "react";
 
-const SmallScreenContext = createContext<boolean | null>(null);
+const SmallScreenContext = createContext<boolean>(false);
 
 const useScreenIsSmall = () => useContext(SmallScreenContext);
 
@@ -17,7 +17,9 @@ type Props = {
 
 const SmallScreenProvider: FC<Props> = ({ children }: Props) => {
   const [screenIsSmall, setScreenIsSmall] = useState(false);
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number | null>(
+    window.innerWidth
+  );
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
