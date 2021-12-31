@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { useScreenIsSmall } from "contexts/SmallScreenContext";
 import TextFactory from "./TextFactory";
+import arcText from "utilities/ArcText";
 
 const LandingText: FC = () => {
   const screenIsSmall = useScreenIsSmall();
@@ -15,9 +16,12 @@ const LandingText: FC = () => {
       ]}
     />
   ) : (
-    <h2 className="text-center pointer-events-none drop-shadow-md 3xl:text-5xl sm:tracking-widest text-primary sm:text-3xl">
-      ketchikan, alaska . 22 years old . full-stack developer . filipino
-    </h2>
+    arcText(
+      "ketchikan, alaska . 22 years old . full-stack developer . filipino",
+      3,
+      "pointer-events-none tracking-wider sm:text-3xl text-primary drop-shadow-md 3xl:text-4xl ",
+      '"'
+    )
   );
 };
 export default LandingText;
