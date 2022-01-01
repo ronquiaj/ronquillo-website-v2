@@ -2,15 +2,24 @@
   opacity: 0;
   animation: peek 5s;
   color: #364936;
+  left: 0;
   position: relative;
   z-index: 10;
-  left: 2.5vw;
+  font-weight: 700;
   pointer-events: none;
 }
 
 @media (min-width: 0px) {
   .animation-text {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
     bottom: -0.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .animation-text {
+    letter-spacing: 5px;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1280px) {
