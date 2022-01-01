@@ -12,16 +12,19 @@ const IconFooter: FC<Props> = ({ className }: Props) => {
         path="github.png"
         alt="github logo"
         url="https://github.com/ronquiaj"
+        displayOnHover="github"
       />
       <IconLink
         url="https://www.linkedin.com/in/adrian-ronquillo-96403a1b8"
         path="linkedin.png"
         alt="linkedin logo"
+        displayOnHover="linkedin"
       />
       <IconLink
         url="https://www.instagram.com/aj.ronquillo/"
         path="instagram.png"
         alt="instagram logo"
+        displayOnHover="instagram"
       />
     </div>
   );
