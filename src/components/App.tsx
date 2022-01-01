@@ -1,13 +1,13 @@
-import SmallScreenProvider from "contexts/SmallScreenContext";
+import ScreenSizeProvider from "contexts/ScreenSizeContext";
 import React, { FC } from "react";
 import Landing from "../sections/Landing/Landing";
 
 const App: FC = () => {
   return (
     <>
-      <SmallScreenProvider>
+      <ScreenSizeProvider>
         <Landing />
-      </SmallScreenProvider>
+      </ScreenSizeProvider>
     </>
   );
 };

@@ -11,7 +11,7 @@ const IconLink: FC<Props> = ({ path, alt, url, className }: Props) => {
   return (
     <a href={url}>
       <img
-        className={`icon cursor-pointer 3xl:w-16 xs:w-12  ${className}`}
+        className={`icon cursor-pointer sm:w-16 xs:w-12  ${className}`}
         src={path}
         alt={alt}
       />

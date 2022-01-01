@@ -16,21 +16,19 @@ const arcText = (
   const mid = Math.floor(text.length / 2);
   let total = mid * arcAmount;
   const factor = 1 / 50;
-  console.log(text.split(""));
   const arcedText = text.split("").map((char, index) => {
     if (index < mid) total -= arcAmount;
     else total += arcAmount;
     return (
       <span
-        className={applyToCharacters}
         style={{
           display: "inline-block",
           transform: `translateY(-${factor * Math.pow(total, 2)}px)  rotate(${
-            mid - index
+            (mid - index) * 1.5
           }deg)`,
         }}
       >
-        {char}&nbsp;
+        <div className={applyToCharacters}>{char}&nbsp;</div>
       </span>
     );
   });
