@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import IconFooter from "./IconFooter/IconFooter";
+import IconLink from "components/IconLink/IconLink";
 import TalkingProfilePicture from "./LandingProfilePicture/TalkingProfilePicture";
 import LandingText from "./LandingText/LandingText";
 
@@ -16,9 +17,19 @@ const Landing: FC = () => {
         words={["pst...", "hey you...", "yeah you...", "click me..."]}
       />
       <LandingText />
-      <IconFooter className="mt-auto -translate-y-5 icon-footer" />
+      <IconFooter className="mt-auto -translate-y-5 icon-footer " />
       {!isDuctTaped && (
-        <button onClick={() => setIsDuctTaped(true)}>duct tape</button>
+        <button
+          onClick={() => setIsDuctTaped(true)}
+          className="absolute bottom-[1%] left-[2%] xs:w-5 xl:w-12"
+        >
+          <IconLink
+            alt="duct tape"
+            path="tape.png"
+            url="#"
+            displayOnHover="duct tape"
+          />
+        </button>
       )}
     </section>
   );
