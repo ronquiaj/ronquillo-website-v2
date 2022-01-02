@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import IconFooter from "./IconFooter/IconFooter";
-import IconLink from "components/IconLink/IconLink";
 import LandingText from "./LandingText/LandingText";
 import LandingProfilePicture from "./LandingProfilePicture/LandingProfilePicture";
+import DuctTape from "./DuctTape/DuctTape";
 
 const Landing: FC = () => {
   const [isDuctTaped, setIsDuctTaped] = useState(false);
@@ -14,24 +14,18 @@ const Landing: FC = () => {
       </h1>
       <LandingProfilePicture
         isDuctTaped={isDuctTaped}
-        incrementStage={() => setStage((stage) => stage + 1)}
+        incrementStage={() => stage !== 2 && setStage((stage) => stage + 1)}
         stage={stage}
       />
-      <LandingText />
+      <LandingText
+        landingText="ketchikan, alaska . 22 years old . frontend developer . filipino"
+        animateText={stage !== 1}
+      />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
-      {!isDuctTaped && (
-        <button
-          onClick={() => setIsDuctTaped(true)}
-          className="absolute bottom-[1%] left-[2%] xs:w-5 xl:w-12"
-        >
-          <IconLink
-            alt="duct tape"
-            path="tape.png"
-            url="#"
-            displayOnHover="duct tape"
-          />
-        </button>
-      )}
+      <DuctTape
+        ductTapeFace={() => setIsDuctTaped(true)}
+        isDuctTaped={isDuctTaped}
+      />
     </section>
   );
 };

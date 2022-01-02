@@ -30,7 +30,7 @@ const LandingProfilePicture: FC<Props> = ({
         />
       );
       break;
-    case 2:
+    default:
       profilePicture = (
         <>
           <EyeBalls className="absolute z-20 -translate-x-1/2 3xl:-translate-y-4 xs:ml-1 xs:translate-y-4 top-1/4 left-1/2" />
@@ -40,22 +40,11 @@ const LandingProfilePicture: FC<Props> = ({
             path="profilePictureShaded.png"
             animating={!isDuctTaped}
             interval={5}
-            words={["so clear...", "so bright...", "click me..."]}
+            words={["so clear...", "so bright...", "so crazy..."]}
           />
         </>
       );
       break;
-    default:
-      profilePicture = (
-        <TalkingProfilePicture
-          alt="adrian"
-          path="profilePicture.png"
-          animating={!isDuctTaped}
-          className={profilePictureStyle}
-          interval={5}
-          words={["much better!", "thank you!", ":)"]}
-        />
-      );
   }
   return (
     <div className="relative cursor-pointer" onClick={incrementStage}>
