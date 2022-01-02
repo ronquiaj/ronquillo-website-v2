@@ -1,0 +1,30 @@
+.eye-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper */
+.eyes {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Eye */
+.pupil {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  background: #99a799;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

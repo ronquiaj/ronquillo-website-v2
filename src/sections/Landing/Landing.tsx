@@ -3,6 +3,7 @@ import IconFooter from "./IconFooter/IconFooter";
 import IconLink from "components/IconLink/IconLink";
 import TalkingProfilePicture from "./LandingProfilePicture/TalkingProfilePicture";
 import LandingText from "./LandingText/LandingText";
+import EyeBalls from "components/EyeBalls/Eyeballs";
 
 const Landing: FC = () => {
   const [isDuctTaped, setIsDuctTaped] = useState(false);
@@ -11,11 +12,16 @@ const Landing: FC = () => {
       <h1 className="mt-12 tracking-widest text-center pointer-events-none hover:translate-y-4 drop-shadow-md xs:text-4xl sm:text-6xl 3xl:text-7xl text-primary">
         adrian ronquillo
       </h1>
-      <TalkingProfilePicture
-        animating={!isDuctTaped}
-        interval={5}
-        words={["pst...", "hey you...", "yeah you...", "click me..."]}
-      />
+
+      <div className="relative ">
+        <EyeBalls className="absolute z-20 -translate-x-1/2 xs:ml-1 top-1/4 left-1/2" />
+        <TalkingProfilePicture
+          animating={!isDuctTaped}
+          interval={5}
+          words={["pst...", "hey you...", "yeah you...", "click me..."]}
+        />
+      </div>
+
       <LandingText />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
       {!isDuctTaped && (
