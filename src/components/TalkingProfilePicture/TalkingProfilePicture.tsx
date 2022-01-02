@@ -7,6 +7,8 @@ type Props = {
   interval: number;
   words: string[];
   className?: string;
+  alt: string;
+  path: string;
 };
 
 const TalkingProfilePicture: FC<Props> = ({
@@ -14,6 +16,8 @@ const TalkingProfilePicture: FC<Props> = ({
   interval,
   words,
   animating,
+  alt,
+  path,
 }: Props) => {
   const animationContainerRef = useRef<HTMLDivElement>(null);
 
@@ -47,11 +51,7 @@ const TalkingProfilePicture: FC<Props> = ({
         ref={animationContainerRef}
         className="absolute animation-container"
       ></div>
-      <ProfilePicture
-        className={`object-cover object-[-12px] xs:mb-8 sm:mb-16 xl:mb-20 3xl:mb-52 ${className}`}
-        alt="adrian"
-        path="profilePictureShaded.png"
-      />
+      <ProfilePicture className={className} alt={alt} path={path} />
     </div>
   );
 };

@@ -1,27 +1,22 @@
 import React, { FC, useState } from "react";
 import IconFooter from "./IconFooter/IconFooter";
 import IconLink from "components/IconLink/IconLink";
-import TalkingProfilePicture from "./LandingProfilePicture/TalkingProfilePicture";
 import LandingText from "./LandingText/LandingText";
-import EyeBalls from "components/EyeBalls/Eyeballs";
+import LandingProfilePicture from "./LandingProfilePicture/LandingProfilePicture";
 
 const Landing: FC = () => {
   const [isDuctTaped, setIsDuctTaped] = useState(false);
+  const [stage, setStage] = useState(1);
   return (
     <section className="flex flex-col items-center w-full min-h-full m-0 font-medium bg-background debug-screens">
       <h1 className="mt-12 tracking-widest text-center pointer-events-none hover:translate-y-4 drop-shadow-md xs:text-4xl sm:text-6xl 3xl:text-7xl text-primary">
         adrian ronquillo
       </h1>
-
-      <div className="relative ">
-        <EyeBalls className="absolute z-20 -translate-x-1/2 xs:ml-1 top-1/4 left-1/2" />
-        <TalkingProfilePicture
-          animating={!isDuctTaped}
-          interval={5}
-          words={["pst...", "hey you...", "yeah you...", "click me..."]}
-        />
-      </div>
-
+      <LandingProfilePicture
+        isDuctTaped={isDuctTaped}
+        incrementStage={() => setStage((stage) => stage + 1)}
+        stage={stage}
+      />
       <LandingText />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
       {!isDuctTaped && (
