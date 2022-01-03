@@ -21,6 +21,7 @@ const arcText = (
     else total += arcAmount;
     return (
       <span
+        key={`${char}${index}`}
         style={{
           display: "inline-block",
           transform: `translateY(-${factor * Math.pow(total, 2)}px)  rotate(${

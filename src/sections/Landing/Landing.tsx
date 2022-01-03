@@ -8,7 +8,7 @@ const Landing: FC = () => {
   const [isDuctTaped, setIsDuctTaped] = useState(false);
   const [stage, setStage] = useState(1);
   return (
-    <section className="flex flex-col items-center w-full min-h-full m-0 font-medium bg-background debug-screens">
+    <section className="flex flex-col items-center w-full min-h-full m-0 font-medium bg-background">
       <h1 className="mt-12 tracking-widest text-center pointer-events-none hover:translate-y-4 drop-shadow-md xs:text-4xl sm:text-6xl 3xl:text-7xl text-primary">
         adrian ronquillo
       </h1>

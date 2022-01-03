@@ -22,7 +22,11 @@ const LandingProfilePicture: FC<Props> = ({
       profilePicture = (
         <TalkingProfilePicture
           className={profilePictureStyle}
-          path="profilePictureShaded.png"
+          path={
+            !isDuctTaped
+              ? "profilePictureShaded.png"
+              : "profilePictureDuctTaped.png"
+          }
           alt="drawn adrian"
           animating={!isDuctTaped}
           interval={5}
@@ -37,7 +41,11 @@ const LandingProfilePicture: FC<Props> = ({
           <TalkingProfilePicture
             className={profilePictureStyle}
             alt="drawn adrian with eyeballs"
-            path="profilePictureShaded.png"
+            path={
+              !isDuctTaped
+                ? "profilePictureShaded.png"
+                : "profilePictureDuctTaped.png"
+            }
             animating={!isDuctTaped}
             interval={5}
             words={["so clear...", "so bright...", "so crazy..."]}
