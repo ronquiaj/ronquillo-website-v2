@@ -1,0 +1,41 @@
+.projects--text {
+  animation: fade 2s;
+}
+
+.projects--text > h1:nth-child(1) {
+  animation: slide-right 2s;
+}
+
+.projects--text > h1:nth-child(2) {
+  animation: slide-left 2s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-25%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(25%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
