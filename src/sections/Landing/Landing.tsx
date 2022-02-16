@@ -22,10 +22,12 @@ const Landing: FC = () => {
         animateText={stage !== 1}
       />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
-      <DuctTape
-        ductTapeFace={() => setIsDuctTaped(true)}
-        isDuctTaped={isDuctTaped}
-      />
+      <div className="relative w-full h-full">
+        <DuctTape
+          ductTapeFace={() => setIsDuctTaped(true)}
+          isDuctTaped={isDuctTaped}
+        />
+      </div>
     </section>
   );
 };
