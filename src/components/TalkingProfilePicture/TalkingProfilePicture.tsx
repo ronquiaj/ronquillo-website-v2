@@ -40,7 +40,7 @@ const TalkingProfilePicture: FC<Props> = ({
     }
 
     return () => {
-      if (animationRef) animationRef.style.setProperty("visibility", "hidden"); // Immediately stop any text already being shown by hiding parent element
+      if (animationRef) animationRef.style.setProperty("display", "none"); // Immediately stop any text already being shown by hiding parent element
       clearInterval(intervalID);
     };
   }, [interval, words, animating]);

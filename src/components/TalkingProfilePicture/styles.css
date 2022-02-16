@@ -27,7 +27,7 @@
     bottom: 0;
   }
 }
-@media (min-width: 1990px) {
+@media (min-width: 1900px) {
   .animation-text {
     bottom: 4rem;
   }

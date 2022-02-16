@@ -6,12 +6,12 @@ const Projects: FC = () => {
   const { scrollXPosition, scrollYPosition } = useScrollContext();
 
   return (
-    <div className="flex items-center justify-center min-h-full">
+    <section className="flex items-center justify-center min-h-full">
       <div className="projects--text">
         <h1>Projects page</h1>
         <h1>Coming soon.....</h1>
       </div>
-    </div>
+    </section>
   );
 };
 
