@@ -10,7 +10,7 @@ const App: FC = () => {
       <ScreenSizeProvider>
         <ScrollContextProvider>
           <Landing />
-          <Projects />
+          {/* <Projects /> */}
         </ScrollContextProvider>
       </ScreenSizeProvider>
     </>
