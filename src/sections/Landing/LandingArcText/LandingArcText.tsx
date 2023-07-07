@@ -49,7 +49,7 @@ const LandingArcText: FC<Props> = ({
     landingText,
     3,
     "font-medium tracking-widest text-primary drop-shadow-md ",
-    "arc-character cursor-pointer hover:-translate-y-4 transition-all 3xl:text-4xl lg:text-2xl"
+    "arc-character cursor-pointer hover:-translate-y-4 transition-all 3xl:text-4xl lg:text-3xl"
   );
 
   return renderedArcText;

@@ -18,7 +18,7 @@ const Landing: FC = () => {
         stage={stage}
       />
       <LandingText
-        landingText="ketchikan, alaska . 22 years old . frontend developer . filipino"
+        landingText="san jose, california . 23 years old . actor / developer . filipino"
         animateText={stage !== 1}
       />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
