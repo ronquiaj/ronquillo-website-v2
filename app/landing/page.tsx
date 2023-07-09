@@ -1,10 +1,12 @@
+"use client";
+
 import React, { FC, useState } from "react";
 import IconFooter from "./IconFooter/IconFooter";
 import LandingText from "./LandingText/LandingText";
 import LandingProfilePicture from "./LandingProfilePicture/LandingProfilePicture";
 import DuctTape from "./DuctTape/DuctTape";
 
-const Landing: FC = () => {
+const Landing = () => {
   const [isDuctTaped, setIsDuctTaped] = useState(false);
   const [stage, setStage] = useState(1);
   return (

@@ -1,6 +1,6 @@
+import React, { FC } from "react";
 import EyeBalls from "components/EyeBalls/Eyeballs";
 import TalkingProfilePicture from "components/TalkingProfilePicture/TalkingProfilePicture";
-import React, { FC } from "react";
 
 type Props = {
   stage: number;

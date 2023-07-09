@@ -1,6 +1,6 @@
+// import "./styles.css";
 import React, { FC, useEffect, useRef } from "react";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
-import "./styles.css";
 
 type Props = {
   animating: boolean;

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import IconLink from "../../../components/IconLink/IconLink";
+import IconLink from "../../../src/components/IconLink/IconLink";
 
 type Props = { className?: string };
 

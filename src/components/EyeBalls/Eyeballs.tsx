@@ -1,5 +1,5 @@
+// import "./styles.css";
 import React, { FC, useEffect } from "react";
-import "./styles.css";
 
 type Props = {
   className?: string;

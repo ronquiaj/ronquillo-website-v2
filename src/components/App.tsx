@@ -1,8 +1,7 @@
+import React, { FC } from "react";
 import ScreenSizeProvider from "contexts/ScreenSizeContext";
 import ScrollContextProvider from "contexts/ScrollContext";
-import React, { FC } from "react";
-import Projects from "sections/Projects/Projects";
-import Landing from "../sections/Landing/Landing";
+import Landing from "../../app/landing/page";
 
 const App: FC = () => {
   return (
@@ -10,7 +9,6 @@ const App: FC = () => {
       <ScreenSizeProvider>
         <ScrollContextProvider>
           <Landing />
-          {/* <Projects /> */}
         </ScrollContextProvider>
       </ScreenSizeProvider>
     </>
