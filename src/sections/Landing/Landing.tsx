@@ -1,10 +1,17 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import IconFooter from "./IconFooter/IconFooter";
 import LandingText from "./LandingText/LandingText";
 import LandingProfilePicture from "./LandingProfilePicture/LandingProfilePicture";
 import DuctTape from "./DuctTape/DuctTape";
 
-const Landing: FC = () => {
+const getAge = () => {
+  const BIRTHDAY = new Date("1999-10-26");
+  const today = new Date();
+  const diff = today.getTime() - BIRTHDAY.getTime();
+  return Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+};
+
+const Landing = () => {
   const [isDuctTaped, setIsDuctTaped] = useState(false);
   const [stage, setStage] = useState(1);
   return (
@@ -18,7 +25,7 @@ const Landing: FC = () => {
         stage={stage}
       />
       <LandingText
-        landingText="san jose, california . 23 years old . actor / developer . filipino"
+        landingText={`san jose, california . ${getAge()} years old . actor / developer . filipino`}
         animateText={stage !== 1}
       />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
