@@ -26,7 +26,7 @@ const Landing: FC = () => {
         stage={stage}
       />
       <LandingText
-        landingText={`san jose, california . ${calculatedAge} years old . actor / developer . filipino`}
+        landingText={`los angeles, california . ${calculatedAge} years old . actor / developer . filipino`}
         animateText={stage !== 1}
       />
       <IconFooter className="mt-auto -translate-y-5 icon-footer " />
